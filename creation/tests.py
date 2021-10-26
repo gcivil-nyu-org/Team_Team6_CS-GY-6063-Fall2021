@@ -19,6 +19,5 @@ class CreationTest(TestCase):
                 "user_input_term": "barbecue",
                 "user_input_location": "100willoughby",
             },
+            follow=True,
         )
-
-    # self.assertEqual(response.status_code, 404)
