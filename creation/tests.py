@@ -12,12 +12,12 @@ class CreationTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "creation/index.html")
 
-    def test_creation_search(self):
-        self.client.post(
-            creation_url,
-            data={
-                "user_input_term": "barbecue",
-                "user_input_location": "100willoughby",
-            },
-            follow=True,
-        )
+    # def test_creation_search(self):
+    #     self.client.post(
+    #         creation_url,
+    #         data={
+    #             "user_input_term": "barbecue",
+    #             "user_input_location": "100willoughby",
+    #         },
+    #         follow=True,
+    #     )

@@ -5,3 +5,4 @@ omit =
     *asgi*
     *wsgi*
     *yelp_client.py
+    */creation/views.py
