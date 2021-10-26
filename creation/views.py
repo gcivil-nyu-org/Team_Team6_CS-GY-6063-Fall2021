@@ -1,3 +1,4 @@
+from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from dayplanner.services import yelp_client
 
@@ -11,8 +12,10 @@ def search(request):
         user_input_param2 = request.POST["user_input_location"]
 
         bussiness_data = yelp_client.search(user_input_param1, user_input_param2)
-
-        context["search_results"] = bussiness_data["businesses"]
+        try:
+            context["search_results"] = bussiness_data["businesses"]
+        except Exception:
+            return HttpResponseNotFound
 
         # Model creation
         # for bussness in bussiness_data['businesses']:
