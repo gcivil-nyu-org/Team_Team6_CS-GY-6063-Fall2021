@@ -9,7 +9,7 @@ creation_url = "/creation/"
 class CreationTest(TestCase):
     def setUp(self):
         self.term = "barbecue"
-        self.location = "100 willoughby"
+        self.location = "100willoughby"
 
     def test_creation_page_url(self):
         response = self.client.get(creation_url)
