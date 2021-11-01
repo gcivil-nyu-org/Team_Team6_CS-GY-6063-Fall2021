@@ -48,10 +48,12 @@ def daylist(request):
         Day.objects.create(creator=request.user, name=dayname)
 
     userObject = request.user
+
     context = {
         "userDayList": userObject.day_set.all().filter(is_active=True),
         "username": userObject.username,
     }
+    
     return render(request, "creation/_day_list.html", context)  
 
 
