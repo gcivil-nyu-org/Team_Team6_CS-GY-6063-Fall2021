@@ -14,7 +14,9 @@
         <div class="columns is-centered">
           <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                 <div class="box">
+
                     <p>Welcome to DayPlanner, {{ username }}!</p>
+
                     <form action="" method ="post">{% csrf_token %}
 
                         <div class="control">
@@ -26,7 +28,7 @@
 
                         </div>              
 
-                        <div>
+                        <div class="field has-text-centered">
 
                             <button type="submit" class="button is-success">
                                 New Day
@@ -35,6 +37,7 @@
                         </div>
 
                     </form>
+                    
                 </div>
           </div>
 
