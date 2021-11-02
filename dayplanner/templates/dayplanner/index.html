@@ -9,23 +9,29 @@
     </div>
 
     <div class="hero-body">
-        <div class="container has-text-left">
-            <p class="title is-size-1">
-            {% if  login_user.username %}
-                Hello, {{login_user}}!
-            {% else %}
-                Welcome Back!
-            {% endif %}
-            </p>
-            <p class="subtitle is-size-4">
-                Are you ready to continue exploring your city?
-            </p>
+
+        <!-- <div class="column">
+
+            <figure class="image is-1by1">
+                <img src="https://i.ibb.co/drxzZc3/Day-Planner-logos-transparent.png" alt="Day-Planner-logos-transparent"/>
+            </figure>
+
+        </div> -->
+        
+        <div class="column">
+            <div class="container has-text-left">
+                <p class="title is-size-1">
+                {% if  login_user.username %}
+                    Hello, {{login_user}}!
+                {% else %}
+                    Welcome Back!
+                {% endif %}
+                </p>
+                <p class="subtitle is-size-4">
+                    Are you ready to continue exploring your city?
+                </p>
+            </div>
         </div>
-
-        <figure class="image is-128x128">
-            <img src="/images/DayPlanner-logos.jpeg">
-        </figure>
-
         
     </div>
 
