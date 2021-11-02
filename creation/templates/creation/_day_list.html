@@ -16,18 +16,27 @@
           <div class="column is-3">
             <div class="box">
 
-                <p>Welcome to DayPlanner, {{ username }}!</p>
+                <label class="label is-medium has-text-centered">
+                    Welcome to DayPlanner, {{ username }}!
+                </label>
+                
+                <label class="label has-text-weight-normal has-text-left">
+                    Access the days you created, or create a new day below!
+                </label>
 
-                <form action="" method ="post">{% csrf_token %}
+                <form action="" method ="post" class="">{% csrf_token %}
 
-                    <div class="control">
+                    <div class="control is-primary">
 
                         <input type="text"
                         placeholder="Name your new Day..."
                         name="day_name"
-                        required>  
+                        required
+                        class="input is-success">  
 
-                    </div>              
+                    </div>    
+                    
+                    <br>
 
                     <div class="field has-text-centered">
 
