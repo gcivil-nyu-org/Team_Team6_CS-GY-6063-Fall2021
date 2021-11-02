@@ -13,36 +13,38 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
-          <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-                <div class="box">
+          <div class="column is-3">
+            <div class="box">
 
-                    <p>Welcome to DayPlanner, {{ username }}!</p>
+                <p>Welcome to DayPlanner, {{ username }}!</p>
 
-                    <form action="" method ="post">{% csrf_token %}
+                <form action="" method ="post">{% csrf_token %}
 
-                        <div class="control">
+                    <div class="control">
 
-                            <input type="text"
-                            placeholder="Name your new Day..."
-                            name="day_name"
-                            required>  
+                        <input type="text"
+                        placeholder="Name your new Day..."
+                        name="day_name"
+                        required>  
 
-                        </div>              
+                    </div>              
 
-                        <div class="field has-text-centered">
+                    <div class="field has-text-centered">
 
-                            <button type="submit" class="button is-success">
-                                New Day
-                            </button>
+                        <button type="submit" class="button is-success">
+                            New Day
+                        </button>
 
-                        </div>
+                    </div>
 
-                    </form>
-                    
-                </div>
+                </form>
+                
+            </div>
           </div>
 
-          <div class="box">
+
+          <div class="column is-7 is-vcentered">
+            <div class="box">
                 <table class="table">
                     <tr class="has-text-centered">
                         <th>Pk</th>
@@ -71,6 +73,7 @@
                     </tr>
                     {% endfor %}
                 </table>
+          </div>
           </div>
 
         </div>
